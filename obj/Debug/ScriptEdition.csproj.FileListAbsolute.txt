@@ -3,3 +3,5 @@ C:\GIT\ScriptEdition\bin\Debug\ScriptEdition.pdb
 C:\GIT\ScriptEdition\obj\Debug\ScriptEdition.csprojResolveAssemblyReference.cache
 C:\GIT\ScriptEdition\obj\Debug\ScriptEdition.exe
 C:\GIT\ScriptEdition\obj\Debug\ScriptEdition.pdb
+C:\GIT\ScriptEdition\obj\Debug\ScriptEdition.MainForm.resources
+C:\GIT\ScriptEdition\obj\Debug\ScriptEdition.csproj.GenerateResource.Cache

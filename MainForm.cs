@@ -29,5 +29,32 @@ namespace ScriptEdition
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
+		
+		
+		
+		void ListBox1DoubleClick(object sender, EventArgs e)
+		{
+			Clipboard.SetText(listBox1.Items[listBox1.SelectedIndex].ToString());
+			richTextBox1.Paste();
+		}
+		
+		void ListBox1SelectedIndexChanged(object sender, EventArgs e)
+		{
+			toolStripStatusLabel3.Text = listBox1.Items[listBox1.SelectedIndex].ToString();
+		}
+		
+		void ListBox1KeyDown(object sender, KeyEventArgs e)
+		{
+			if(e.KeyData == Keys.Enter){
+				Clipboard.SetText(listBox1.Items[listBox1.SelectedIndex].ToString());
+				richTextBox1.Paste();
+			}
+		}
+		
+		void MainFormLoad(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }

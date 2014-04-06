@@ -56,5 +56,22 @@ namespace ScriptEdition
 		{
 			
 		}
+		
+		void FontToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			if(fontDialog1.ShowDialog() == DialogResult.OK){
+				listBox1.Font = fontDialog1.Font;
+				richTextBox1.Font = fontDialog1.Font;
+			}
+		}
+		
+		void FontColorToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			if(colorDialog1.ShowDialog() == DialogResult.OK){
+				listBox1.ForeColor = colorDialog1.Color;
+				richTextBox1.ForeColor = colorDialog1.Color;
+			}
+		}
+		
 	}
 }

@@ -99,18 +99,15 @@ namespace ScriptEdition
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-			this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+			this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
+			this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+			this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.tabControl2 = new System.Windows.Forms.TabControl();
-			this.NewFile = new System.Windows.Forms.TabPage();
-			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.fontDialog1 = new System.Windows.Forms.FontDialog();
 			this.listBox2 = new System.Windows.Forms.ListBox();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.listBox3 = new System.Windows.Forms.ListBox();
@@ -122,6 +119,15 @@ namespace ScriptEdition
 			this.listBox6 = new System.Windows.Forms.ListBox();
 			this.tabPage7 = new System.Windows.Forms.TabPage();
 			this.listBox7 = new System.Windows.Forms.ListBox();
+			this.tabPage8 = new System.Windows.Forms.TabPage();
+			this.tabControl3 = new System.Windows.Forms.TabControl();
+			this.tabPage9 = new System.Windows.Forms.TabPage();
+			this.tabPage10 = new System.Windows.Forms.TabPage();
+			this.tabControl2 = new System.Windows.Forms.TabControl();
+			this.NewFile = new System.Windows.Forms.TabPage();
+			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.fontDialog1 = new System.Windows.Forms.FontDialog();
 			this.menuStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
@@ -132,13 +138,15 @@ namespace ScriptEdition
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
-			this.tabControl2.SuspendLayout();
-			this.NewFile.SuspendLayout();
 			this.tabPage3.SuspendLayout();
 			this.tabPage4.SuspendLayout();
 			this.tabPage5.SuspendLayout();
 			this.tabPage6.SuspendLayout();
 			this.tabPage7.SuspendLayout();
+			this.tabPage8.SuspendLayout();
+			this.tabControl3.SuspendLayout();
+			this.tabControl2.SuspendLayout();
+			this.NewFile.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// menuStrip1
@@ -327,7 +335,7 @@ namespace ScriptEdition
 			this.runToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("runToolStripMenuItem.Image")));
 			this.runToolStripMenuItem.Name = "runToolStripMenuItem";
 			this.runToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-			this.runToolStripMenuItem.Text = "Run";
+			this.runToolStripMenuItem.Text = "Run in IE";
 			// 
 			// toolStripSeparator6
 			// 
@@ -597,8 +605,10 @@ namespace ScriptEdition
 			// 
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.toolStripStatusLabel1,
+									this.toolStripStatusLabel3,
+									this.toolStripStatusLabel5,
 									this.toolStripStatusLabel2,
-									this.toolStripStatusLabel3});
+									this.toolStripStatusLabel4});
 			this.statusStrip1.Location = new System.Drawing.Point(0, 539);
 			this.statusStrip1.Name = "statusStrip1";
 			this.statusStrip1.Size = new System.Drawing.Size(784, 22);
@@ -611,17 +621,30 @@ namespace ScriptEdition
 			this.toolStripStatusLabel1.Size = new System.Drawing.Size(141, 17);
 			this.toolStripStatusLabel1.Text = "2014 (с) Somov Evgeniy   ";
 			// 
+			// toolStripStatusLabel3
+			// 
+			this.toolStripStatusLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+			this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+			this.toolStripStatusLabel3.Size = new System.Drawing.Size(49, 17);
+			this.toolStripStatusLabel3.Text = "Строка:";
+			// 
+			// toolStripStatusLabel5
+			// 
+			this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
+			this.toolStripStatusLabel5.Size = new System.Drawing.Size(22, 17);
+			this.toolStripStatusLabel5.Text = "     ";
+			// 
 			// toolStripStatusLabel2
 			// 
 			this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-			this.toolStripStatusLabel2.Size = new System.Drawing.Size(51, 17);
-			this.toolStripStatusLabel2.Text = "[string: ]";
+			this.toolStripStatusLabel2.Size = new System.Drawing.Size(150, 17);
+			this.toolStripStatusLabel2.Text = "Тип: [UTF-8 Without BOM]";
 			// 
-			// toolStripStatusLabel3
+			// toolStripStatusLabel4
 			// 
-			this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-			this.toolStripStatusLabel3.Size = new System.Drawing.Size(16, 17);
-			this.toolStripStatusLabel3.Text = "...";
+			this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+			this.toolStripStatusLabel4.Size = new System.Drawing.Size(56, 17);
+			this.toolStripStatusLabel4.Text = "Путь: [...]";
 			// 
 			// splitContainer1
 			// 
@@ -653,6 +676,7 @@ namespace ScriptEdition
 			this.tabControl1.Controls.Add(this.tabPage5);
 			this.tabControl1.Controls.Add(this.tabPage6);
 			this.tabControl1.Controls.Add(this.tabPage7);
+			this.tabControl1.Controls.Add(this.tabPage8);
 			this.tabControl1.Location = new System.Drawing.Point(3, 3);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
@@ -681,7 +705,8 @@ namespace ScriptEdition
 			this.listBox1.Items.AddRange(new object[] {
 									"&nbsp;",
 									"<!-- -->",
-									"<!DOCTYPE html> ",
+									"<!DOCTYPE>",
+									"<!DOCTYPE html>",
 									"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/str" +
 												"ict.dtd\">",
 									"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org" +
@@ -689,79 +714,61 @@ namespace ScriptEdition
 									"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Frameset//EN\" \"http://www.w3.org/TR/" +
 												"html4/frameset.dtd\">",
 									"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xh" +
-												"tml1/DTD/xhtml1-strict.dtd\">",
+												"tml1/DTD/xhtml1-strict.dtd\">html",
 									"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org" +
 												"/TR/xhtml1/DTD/xhtml1-transitional.dtd\">",
 									"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Frameset//EN\" \"http://www.w3.org/TR/" +
 												"xhtml1/DTD/xhtml1-frameset.dtd\">",
 									"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/D" +
 												"TD/xhtml11.dtd\">",
-									"<a href=\"URL\" target=\"_blank\">...</a>",
-									"<a name=\"идентификатор\">...</a>",
-									"<abbr title=\"заголовок\">текст</abbr>",
-									"<acronym title=\"подробно\">сокращенно</acronym>",
-									"<address>Текст</address>",
-									"<applet code=\"URL\">Текст</applet>",
-									"<area href=\"URL\">",
-									"<map><area href=\"URL\"></map>",
-									"<article>текст</article>",
+									"<a></a>",
+									"<abbr></abbr>",
+									"<acronym></acronym>",
+									"<address></address>",
+									"<applet></applet>",
+									"<area>",
+									"<article></article>",
 									"<aside></aside>",
-									"<audio src=\"URL\"></audio>",
-									"<audio><source src=\"URL\"></audio>",
-									"<b>Текст</b>",
-									"<base target=\"_blank\"> ",
-									"<basefont face=\"Arial, Helvetica, sans-serif\" size=\"4\" color=\"maroon\">",
-									"<bdi>Текст</bdi>",
-									"<bdo>Текст</bdo>",
-									"<bgsound src=\"town.mid\" loop=\"-1\">",
-									"<big>Текст</big>",
-									"<blink>Текст</blink>",
-									"<blockquote>Текст</blockquote>",
+									"<b></b>",
+									"<base>",
+									"<basefont>",
+									"<bdi></bdi>",
+									"<bdo></bdo>",
+									"<bgsound>",
+									"<blockquote></blockquote>",
+									"<big></big>",
 									"<body></body>",
+									"<blink></blink>",
 									"<br>",
 									"<button></button>",
-									"<form><button>...</button></form>",
-									"<canvas id=\"smile\" width=\"200\" height=\"200\"></canvas>",
-									"<caption>Текст</caption>",
-									"<table><caption></caption><tr><td>...</td></tr></table>",
-									"<center>Текст</center>",
-									"<cite>Текст</cite>",
-									"<code>Текст</code>",
-									"<col width=\"100\" valign=\"top\">",
-									"<table><col атрибуты><tr><td>...</td></tr></table>",
-									"<colgroup span=\"9\" align=\"center\" width=\"50\">",
-									"<table><colgroup атрибуты><tr><td>...</td></tr></table>",
-									"<command onclick=\"alert(\'Слава роботам!\')\" label=\"Выполнить директиву №1\">",
-									"<menu><command параметры></menu>",
-									"<comment>текст</comment>",
-									"<datalist id=\"<идентификатор>\">",
-									"<input list=\"<идентификатор>\"><datalist id=\"<идентификатор>\"><option value=\"Текст" +
-												"1\"><option value=\"Текст2\"></datalist>",
-									"<dd>Определение термина 1</dd>",
-									"<dl><dt>Термин 1</dt><dd>Определение термина 1</dd><dt>Термин 2</dt><dd>Определен" +
-												"ие термина 2</dd></dl>",
-									"<del>Текст</del>",
-									"<details open=\"open\">Текст</details>",
-									"<details><summary>Текст</summary></details>",
-									"<dfn>Текст</dfn>",
+									"<canvas></canvas>",
+									"<caption></caption>",
+									"<center></center>",
+									"<cite></cite>",
+									"<code></code>",
+									"<col>",
+									"<colgroup></colgroup>",
+									"<command>",
+									"<comment>",
+									"<datalist></datalist>",
+									"<dd></dd>",
+									"<del></del>",
+									"<details></details>",
+									"<dfn></dfn>",
 									"<dir></dir>",
-									"<dir><li>имя директории</li><li>имя директории</li></dir>",
 									"<div></div>",
 									"<dl></dl>",
-									"<dl><dt>Термин 1</dt><dd>Определение термина 1</dd><dt>Термин 2</dt><dd>Определен" +
-												"ие термина 2</dd></dl>",
 									"<dt></dt>",
-									"<dl><dt>Термин 1</dt><dd>Определение термина 1</dd><dt>Термин 2</dt><dd>Определен" +
-												"ие термина 2</dd></dl>",
-									"<em>Текст</em>",
-									"<embed src=\" \" width=\"100\" height=\"100\"></embed>",
+									"<em></em>",
+									"<embed></embed>",
 									"<fieldset></fieldset>",
-									"<figcaption>Описание</figcaption>",
-									"<figure><figcaption>Описание</figcaption></figure>",
-									"<font size=\"5\" color=\"red\" face=\"Arial\">Текст</font>",
-									"<footer>Copyright</footer>",
-									"<form action=\"URL\"></form>",
-									"<frameset><frame></frameset>",
+									"<figcaption></figcaption>",
+									"<figure></figure>",
+									"<font></font>",
+									"<form></form>",
+									"<footer></footer>",
+									"<frame></frame>",
+									"<frameset></frameset>",
 									"<h1></h1>",
 									"<h2></h2>",
 									"<h3></h3>",
@@ -773,88 +780,74 @@ namespace ScriptEdition
 									"<hgroup></hgroup>",
 									"<hr>",
 									"<html></html>",
-									"<i>Текст</i>",
-									"<iframe src=\"banner.html\" width=\"468\" height=\"60\" align=\"left\">...</iframe>",
-									"<img src=\"images/girl.png\" width=\"189\" height=\"255\" alt=\"lorem\">",
-									"<input type=\"radio\" name=\"browser\" value=\"ie\">",
-									"<ins>Текст</ins>",
-									"<isindex prompt=\"Искать текст: \">",
-									"<kbd>Текст</kbd>",
+									"<i></i>",
+									"<iframe></iframe>",
+									"<img>",
+									"<input>",
+									"<ins></ins>",
+									"<isindex>",
+									"<kbd></kbd>",
 									"<keygen></keygen>",
-									"<form><keygen></keygen></form>",
-									"<label for=\"идентификатор\">Текст</label>",
-									"<input id=\"идентификатор\"><label for=\"идентификатор\">Текст</label><label><input t" +
-												"ype=\"...\"> Текст</label>",
-									"<legend>Текст</legend>",
-									"<fieldset><legend>Текст</legend></fieldset>",
-									"<li>элемент маркированного списка</li>",
-									"<ul><li>элемент маркированного списка</li></ul>",
-									"<link rel=\"stylesheet\" href=\"ie.css\">",
-									"<head><link rel=\"stylesheet\" href=\"ie.css\"></head>",
-									"<listing>Текст</listing>",
-									"<main>Текст</main>",
-									"<map name=\"имя\"><area атрибуты></map>",
-									"<mark>текст</mark>",
-									"<marquee behavior=\"alternate\" direction=\"left\" bgcolor=\"#ffcc00\">Текст</marquee>",
-									"<menu><li>пункт меню</li><li>пункт меню</li></menu>",
-									"<meta charset=\"utf-8\">",
-									"<meter value=\"значение\">текст</meter>",
-									"<multicol cols=\"<число>\">Текст</multicol>",
-									"<nav>ссылки</nav>",
-									"<nobr>Текст</nobr>",
-									"<noembed>Текст</noembed>",
-									"<noframes>Текст</noframes>",
-									"<frameset><noframes>Текст</noframes></frameset>",
-									"<noscript>Текст</noscript>",
-									"<ol><li>элемент нумерованного списка</li><li>элемент нумерованного списка</li></o" +
-												"l>",
-									"<optgroup label=\"...\"><option>...</option></optgroup>",
-									"<select><optgroup label=\"...\"><option>...</option></optgroup></select>",
-									"<option>Пункт 1</option>",
-									"<select><option>Пункт 1</option><option>Пункт 2</option></select>",
+									"<label></label>",
+									"<legend></legend>",
+									"<li></li>",
+									"<link>",
+									"<map></map>",
+									"<marquee></marquee>",
+									"<mark></mark>",
+									"<menu></menu>",
+									"<meta>",
+									"<meter></meter>",
+									"<nav></nav>",
+									"<nobr></nobr>",
+									"<noembed></noembed>",
+									"<noframes></noframes>",
+									"<noscript></noscript>",
+									"<object></object>",
+									"<ol></ol>",
+									"<optgroup></optgroup>",
+									"<option></option>",
 									"<output></output>",
-									"<p>Текст</p>",
-									"<param name=\"имя\" value=\"значение\">",
-									"<object classid=\"animation.class\" width=\"500\" height=\"200\"><param name=\"bgcolor\" " +
-												"value=\"#000000\"></object>",
-									"<plaintext>Текст</plaintext>",
-									"<pre>Текст</pre>",
-									"<progress value=\"<число>\" max=\"<число>\">Текст</progress>",
-									"<q>Текст</q>",
-									"<rp>текст</rp><rt>аннотация</rt><rp>текст</rp>",
-									"<ruby>текст<rp>текст</rp><rt>аннотация</rt><rp>текст</rp></ruby>",
-									"<s>Текст</s>",
-									"<samp>Текст</samp>",
-									"<script type=\"тип\" src=\"URL\"></script>",
-									"<script type=\"text/javascript\"></script>",
+									"<p></p>",
+									"<param>",
+									"<plaintext></plaintext>",
+									"<pre></pre>",
+									"<progress></progress>",
+									"<q></q>",
+									"<rp></rp>",
+									"<rt></rt>",
+									"<ruby></ruby>",
+									"<s></s>",
+									"<samp></samp>",
+									"<script></script>",
+									"<select></select>",
 									"<section></section>",
-									"<select><option>Пункт 1</option><option>Пункт 2</option></select>",
-									"<small>Текст</small>",
-									"<source src=\"URL\">",
-									"<spacer height=\"<число>\" width=\"<число>\"></spacer>",
+									"<small></small>",
 									"<span></span>",
-									"<strike>Текст</strike>",
-									"<strong>Текст</strong>",
-									"<style type=\"text/css\"></style>",
-									"<sub>Текст</sub>",
-									"<summary>Текст</summary>",
-									"<details><summary>Текст</summary></details>",
-									"<sup>Текст</sup>",
-									"<table><tr><td>...</td></tr></table>",
-									"<thead></thead>",
+									"<source>",
+									"<strike></strike>",
+									"<strong></strong>",
+									"<style></style>",
+									"<sub></sub>",
+									"<sup></sup>",
+									"<summary></summary>",
+									"<table></table>",
+									"<tbody></tbody>",
+									"<td></td>",
+									"<textarea></textarea>",
 									"<tfoot></tfoot>",
-									"<tbody><tr><td> ... </td></tr></tbody>",
-									"<textarea \"атрибуты\">текст</textarea>",
-									"<time datetime=\"<дата и время>\">текст</time>",
-									"<title>Заголовок</title>",
-									"<track kind | src | srclang | label | default>",
-									"<video><track kind | src | srclang | label | default></video>",
-									"<u>Текст</u>",
-									"<ul><li>элемент маркированного списка</li></ul>",
-									"<var>Текст</var>",
-									"<video><source src=\"URL\"></video>",
-									"Текст<wbr>текст",
-									"<xmp>Текст</xmp>",
+									"<th></th>",
+									"<thead></thead>",
+									"<time></time>",
+									"<title></title>",
+									"<tr></tr>",
+									"<tt></tt>",
+									"<u></u>",
+									"<ul></ul>",
+									"<var></var>",
+									"<video></video>",
+									"<wbr>",
+									"<xmp></xmp>",
 									"abbr",
 									"accept",
 									"accesskey",
@@ -994,41 +987,6 @@ namespace ScriptEdition
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "css";
 			this.tabPage2.UseVisualStyleBackColor = true;
-			// 
-			// tabControl2
-			// 
-			this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-									| System.Windows.Forms.AnchorStyles.Left) 
-									| System.Windows.Forms.AnchorStyles.Right)));
-			this.tabControl2.Controls.Add(this.NewFile);
-			this.tabControl2.Location = new System.Drawing.Point(3, 3);
-			this.tabControl2.Name = "tabControl2";
-			this.tabControl2.SelectedIndex = 0;
-			this.tabControl2.Size = new System.Drawing.Size(568, 484);
-			this.tabControl2.TabIndex = 0;
-			// 
-			// NewFile
-			// 
-			this.NewFile.Controls.Add(this.richTextBox1);
-			this.NewFile.Location = new System.Drawing.Point(4, 22);
-			this.NewFile.Name = "NewFile";
-			this.NewFile.Padding = new System.Windows.Forms.Padding(3);
-			this.NewFile.Size = new System.Drawing.Size(560, 458);
-			this.NewFile.TabIndex = 0;
-			this.NewFile.Text = "New1 *";
-			this.NewFile.UseVisualStyleBackColor = true;
-			// 
-			// richTextBox1
-			// 
-			this.richTextBox1.AcceptsTab = true;
-			this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.richTextBox1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.richTextBox1.Location = new System.Drawing.Point(3, 3);
-			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(554, 452);
-			this.richTextBox1.TabIndex = 0;
-			this.richTextBox1.Text = "";
-			this.richTextBox1.WordWrap = false;
 			// 
 			// listBox2
 			// 
@@ -3929,6 +3887,86 @@ namespace ScriptEdition
 			this.listBox7.Size = new System.Drawing.Size(186, 436);
 			this.listBox7.TabIndex = 6;
 			// 
+			// tabPage8
+			// 
+			this.tabPage8.Controls.Add(this.tabControl3);
+			this.tabPage8.Location = new System.Drawing.Point(4, 25);
+			this.tabPage8.Name = "tabPage8";
+			this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage8.Size = new System.Drawing.Size(192, 455);
+			this.tabPage8.TabIndex = 7;
+			this.tabPage8.Text = "Template";
+			this.tabPage8.UseVisualStyleBackColor = true;
+			// 
+			// tabControl3
+			// 
+			this.tabControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.tabControl3.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+			this.tabControl3.Controls.Add(this.tabPage9);
+			this.tabControl3.Controls.Add(this.tabPage10);
+			this.tabControl3.Location = new System.Drawing.Point(0, 0);
+			this.tabControl3.Name = "tabControl3";
+			this.tabControl3.SelectedIndex = 0;
+			this.tabControl3.Size = new System.Drawing.Size(189, 455);
+			this.tabControl3.TabIndex = 0;
+			// 
+			// tabPage9
+			// 
+			this.tabPage9.Location = new System.Drawing.Point(4, 25);
+			this.tabPage9.Name = "tabPage9";
+			this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage9.Size = new System.Drawing.Size(181, 426);
+			this.tabPage9.TabIndex = 0;
+			this.tabPage9.Text = "C++";
+			this.tabPage9.UseVisualStyleBackColor = true;
+			// 
+			// tabPage10
+			// 
+			this.tabPage10.Location = new System.Drawing.Point(4, 25);
+			this.tabPage10.Name = "tabPage10";
+			this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage10.Size = new System.Drawing.Size(181, 426);
+			this.tabPage10.TabIndex = 1;
+			this.tabPage10.Text = "C#";
+			this.tabPage10.UseVisualStyleBackColor = true;
+			// 
+			// tabControl2
+			// 
+			this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+									| System.Windows.Forms.AnchorStyles.Left) 
+									| System.Windows.Forms.AnchorStyles.Right)));
+			this.tabControl2.Controls.Add(this.NewFile);
+			this.tabControl2.Location = new System.Drawing.Point(3, 3);
+			this.tabControl2.Name = "tabControl2";
+			this.tabControl2.SelectedIndex = 0;
+			this.tabControl2.Size = new System.Drawing.Size(568, 484);
+			this.tabControl2.TabIndex = 0;
+			// 
+			// NewFile
+			// 
+			this.NewFile.Controls.Add(this.richTextBox1);
+			this.NewFile.Location = new System.Drawing.Point(4, 22);
+			this.NewFile.Name = "NewFile";
+			this.NewFile.Padding = new System.Windows.Forms.Padding(3);
+			this.NewFile.Size = new System.Drawing.Size(560, 458);
+			this.NewFile.TabIndex = 0;
+			this.NewFile.Text = "New1 *";
+			this.NewFile.UseVisualStyleBackColor = true;
+			// 
+			// richTextBox1
+			// 
+			this.richTextBox1.AcceptsTab = true;
+			this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.richTextBox1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.richTextBox1.Location = new System.Drawing.Point(3, 3);
+			this.richTextBox1.Name = "richTextBox1";
+			this.richTextBox1.Size = new System.Drawing.Size(554, 452);
+			this.richTextBox1.TabIndex = 0;
+			this.richTextBox1.Text = "";
+			this.richTextBox1.WordWrap = false;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3957,16 +3995,24 @@ namespace ScriptEdition
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.tabPage2.ResumeLayout(false);
-			this.tabControl2.ResumeLayout(false);
-			this.NewFile.ResumeLayout(false);
 			this.tabPage3.ResumeLayout(false);
 			this.tabPage4.ResumeLayout(false);
 			this.tabPage5.ResumeLayout(false);
 			this.tabPage6.ResumeLayout(false);
 			this.tabPage7.ResumeLayout(false);
+			this.tabPage8.ResumeLayout(false);
+			this.tabControl3.ResumeLayout(false);
+			this.tabControl2.ResumeLayout(false);
+			this.NewFile.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.TabPage tabPage10;
+		private System.Windows.Forms.TabPage tabPage9;
+		private System.Windows.Forms.TabControl tabControl3;
+		private System.Windows.Forms.TabPage tabPage8;
+		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
+		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
 		private System.Windows.Forms.ListBox listBox7;
 		private System.Windows.Forms.TabPage tabPage7;
 		private System.Windows.Forms.ListBox listBox6;

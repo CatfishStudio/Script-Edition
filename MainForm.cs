@@ -41,7 +41,7 @@ namespace ScriptEdition
 		
 		void ListBox1SelectedIndexChanged(object sender, EventArgs e)
 		{
-			toolStripStatusLabel3.Text = listBox1.Items[listBox1.SelectedIndex].ToString();
+			//toolStripStatusLabel3.Text = listBox1.Items[listBox1.SelectedIndex].ToString();
 		}
 		
 		void ListBox1KeyDown(object sender, KeyEventArgs e)
@@ -72,6 +72,8 @@ namespace ScriptEdition
 				richTextBox1.ForeColor = colorDialog1.Color;
 			}
 		}
+		
+		
 		
 	}
 }

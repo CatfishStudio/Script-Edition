@@ -119,10 +119,6 @@ namespace ScriptEdition
 			this.listBox6 = new System.Windows.Forms.ListBox();
 			this.tabPage7 = new System.Windows.Forms.TabPage();
 			this.listBox7 = new System.Windows.Forms.ListBox();
-			this.tabPage8 = new System.Windows.Forms.TabPage();
-			this.tabControl3 = new System.Windows.Forms.TabControl();
-			this.tabPage9 = new System.Windows.Forms.TabPage();
-			this.tabPage10 = new System.Windows.Forms.TabPage();
 			this.tabControl2 = new System.Windows.Forms.TabControl();
 			this.NewFile = new System.Windows.Forms.TabPage();
 			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -143,8 +139,6 @@ namespace ScriptEdition
 			this.tabPage5.SuspendLayout();
 			this.tabPage6.SuspendLayout();
 			this.tabPage7.SuspendLayout();
-			this.tabPage8.SuspendLayout();
-			this.tabControl3.SuspendLayout();
 			this.tabControl2.SuspendLayout();
 			this.NewFile.SuspendLayout();
 			this.SuspendLayout();
@@ -676,7 +670,6 @@ namespace ScriptEdition
 			this.tabControl1.Controls.Add(this.tabPage5);
 			this.tabControl1.Controls.Add(this.tabPage6);
 			this.tabControl1.Controls.Add(this.tabPage7);
-			this.tabControl1.Controls.Add(this.tabPage8);
 			this.tabControl1.Location = new System.Drawing.Point(3, 3);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
@@ -3887,51 +3880,6 @@ namespace ScriptEdition
 			this.listBox7.Size = new System.Drawing.Size(186, 436);
 			this.listBox7.TabIndex = 6;
 			// 
-			// tabPage8
-			// 
-			this.tabPage8.Controls.Add(this.tabControl3);
-			this.tabPage8.Location = new System.Drawing.Point(4, 25);
-			this.tabPage8.Name = "tabPage8";
-			this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage8.Size = new System.Drawing.Size(192, 455);
-			this.tabPage8.TabIndex = 7;
-			this.tabPage8.Text = "Template";
-			this.tabPage8.UseVisualStyleBackColor = true;
-			// 
-			// tabControl3
-			// 
-			this.tabControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-									| System.Windows.Forms.AnchorStyles.Left) 
-									| System.Windows.Forms.AnchorStyles.Right)));
-			this.tabControl3.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-			this.tabControl3.Controls.Add(this.tabPage9);
-			this.tabControl3.Controls.Add(this.tabPage10);
-			this.tabControl3.Location = new System.Drawing.Point(0, 0);
-			this.tabControl3.Name = "tabControl3";
-			this.tabControl3.SelectedIndex = 0;
-			this.tabControl3.Size = new System.Drawing.Size(189, 455);
-			this.tabControl3.TabIndex = 0;
-			// 
-			// tabPage9
-			// 
-			this.tabPage9.Location = new System.Drawing.Point(4, 25);
-			this.tabPage9.Name = "tabPage9";
-			this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage9.Size = new System.Drawing.Size(181, 426);
-			this.tabPage9.TabIndex = 0;
-			this.tabPage9.Text = "C++";
-			this.tabPage9.UseVisualStyleBackColor = true;
-			// 
-			// tabPage10
-			// 
-			this.tabPage10.Location = new System.Drawing.Point(4, 25);
-			this.tabPage10.Name = "tabPage10";
-			this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage10.Size = new System.Drawing.Size(181, 426);
-			this.tabPage10.TabIndex = 1;
-			this.tabPage10.Text = "C#";
-			this.tabPage10.UseVisualStyleBackColor = true;
-			// 
 			// tabControl2
 			// 
 			this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -4000,17 +3948,11 @@ namespace ScriptEdition
 			this.tabPage5.ResumeLayout(false);
 			this.tabPage6.ResumeLayout(false);
 			this.tabPage7.ResumeLayout(false);
-			this.tabPage8.ResumeLayout(false);
-			this.tabControl3.ResumeLayout(false);
 			this.tabControl2.ResumeLayout(false);
 			this.NewFile.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
-		private System.Windows.Forms.TabPage tabPage10;
-		private System.Windows.Forms.TabPage tabPage9;
-		private System.Windows.Forms.TabControl tabControl3;
-		private System.Windows.Forms.TabPage tabPage8;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
 		private System.Windows.Forms.ListBox listBox7;
